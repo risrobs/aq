@@ -1,50 +1,26 @@
-<!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Scan credit card using iOS 8</title>
+<style type="text/css">
+  input {height:1.5em;width:95%}
+  input[type="number"] {font-size: 2.5em}
+  body {background-color:lightgray;font-size: 3em;font-family: sans-serif;}
+  #purchase {font-size: 2em;font-weight: bold;height:1.2em}
+</style>
 </head>
 <body>
-<form>
-
-<label>Name on card 
-  <input type=text autocomplete="ccname">
-</label>
-
-
-
-
-<label>Credit card number: 
-  <input type=text autocomplete="cc-number">
-</label>
-
-
-
-<label>Expiry
-  <input type=text autocomplete="cc-exp">
-</label>
-
-
-<label for="ccname">Name on card</label>
-<input name="ccname" type="text"   autocomplete="input"> 
-
-
-<label for="cardnumber">Card Number</label>
-<input name="cardnumber" type="number"  required autocomplete="input">
-
-
-<label for="cc-exp">Expiry</label>
-<input name="cc-exp" type="number"  required placeholder="MM-YYYY" autocomplete="input">
-
-<label for="cvc">CVC</label>
-<input name="cvc" type="number"  required autocomplete="input">
-
-<label>CVC
-  <input type=text autocomplete="cvc">
-</label>
-
-
-
+<form action="https://yoursite.com/credit-card-purchase" method="POST">
+Credit Card Number 1<br />
+<input  type="number" autocomplete="cc-number" name="cardNumber" id="cardNumber" value="" placeholder="*** **** *** ****" />
+<br />
+Expiry month <br /> 
+<input type="number"  name="expirationMonth" id="cardExpirationMonth" />
+<br />
+Expiry year <br />
+<input type="number" name="expirationYear" id="cardExpirationYear" />
+<br />
+<br />
+<input type="submit" value="Purchase" id="purchase">
 </form>
-  </body>
+</head>
 </html>
